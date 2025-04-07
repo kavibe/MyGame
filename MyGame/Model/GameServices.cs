@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
+
+namespace MyGame.Model
+{
+    public class GameServices
+    {
+        public bool IsFullScreen { get; set; }
+        public int ScreenWidth { get; set; } = 1080;
+        public int ScreenHeight { get; set; } = 720;
+
+        public void ToggleFullScreen()
+        {
+            IsFullScreen = !IsFullScreen;
+        }
+    }
+}
