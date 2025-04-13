@@ -35,9 +35,9 @@ namespace MyGame.Controller
                 ApplyScreenSettings();
             }
 
-            if (keyboardState.IsKeyDown(Keys.A))
+            if (keyboardState.IsKeyDown(Keys.W))
                 GameView.Position.X -= GameView.MoveSpeed * deltaTime;
-            if (keyboardState.IsKeyDown(Keys.D))
+            if (keyboardState.IsKeyDown(Keys.S))
                 GameView.Position.X += GameView.MoveSpeed * deltaTime;
 
 

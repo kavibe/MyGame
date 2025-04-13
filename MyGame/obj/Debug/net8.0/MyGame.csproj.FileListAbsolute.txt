@@ -24,3 +24,4 @@ C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\obj\Debug\net8.0\M
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\obj\Debug\net8.0\MyGame.genruntimeconfig.cache
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\obj\Debug\net8.0\ref\MyGame.dll
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\bus.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\obj\Debug\net8.0\MyGame.sourcelink.json
