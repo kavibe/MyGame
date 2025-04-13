@@ -34,12 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -50,8 +46,7 @@
               "RelativeToolTip": "MyGame\\Model\\GameModels.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAxwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T09:44:01.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T09:44:01.814Z"
             },
             {
               "$type": "Document",
@@ -97,7 +92,7 @@
               "RelativeDocumentMoniker": "MyGame\\Controller\\GameController.cs",
               "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\GameController.cs",
               "RelativeToolTip": "MyGame\\Controller\\GameController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwB0AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T09:27:12.876Z",
               "EditorCaption": ""

@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gameservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,19 +38,19 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "GameModels.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameModels.cs",
               "RelativeDocumentMoniker": "MyGame\\Model\\GameModels.cs",
               "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameModels.cs",
               "RelativeToolTip": "MyGame\\Model\\GameModels.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T09:44:01.814Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GameLogic.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameLogic.cs",
               "RelativeDocumentMoniker": "MyGame\\Model\\GameLogic.cs",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GameView.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\GameView.cs",
               "RelativeDocumentMoniker": "MyGame\\View\\GameView.cs",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Game1.cs",
               "RelativeDocumentMoniker": "MyGame\\Game1.cs",
@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "MyGame\\Controller\\GameController.cs",
               "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\GameController.cs",
               "RelativeToolTip": "MyGame\\Controller\\GameController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwB0AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T09:27:12.876Z",
               "EditorCaption": ""
