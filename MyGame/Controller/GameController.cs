@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using MyGame.Model;
 using MyGame.View;
+using static MyGame.Model.Bus;
 
 namespace MyGame.Controller
 {
@@ -15,10 +16,14 @@ namespace MyGame.Controller
         private readonly GameServices _model;
         private readonly GraphicsDeviceManager _graphics;
 
-        public GameController(GameServices model, GraphicsDeviceManager graphics)
+        private readonly GameLogic _game;
+
+
+        public GameController(GameServices model, GraphicsDeviceManager graphics, GameLogic game)
         {
             _model = model;
             _graphics = graphics;
+            _game = game;
         }
 
         public void HandleInput(GameTime gameTime)
@@ -36,9 +41,14 @@ namespace MyGame.Controller
             }
 
             if (keyboardState.IsKeyDown(Keys.A))
-                GameView.Position.X -= GameView.MoveSpeed * deltaTime;
+                _game.Players[0].Bus.Turn(deltaTime, Bus.TurnDirection.Left);
             if (keyboardState.IsKeyDown(Keys.D))
-                GameView.Position.X += GameView.MoveSpeed * deltaTime;
+                _game.Players[0].Bus.Turn(deltaTime, Bus.TurnDirection.Right);
+
+            if (keyboardState.IsKeyDown(Keys.Left))
+                _game.Players[1].Bus.Turn(deltaTime, TurnDirection.Left);
+            if (keyboardState.IsKeyDown(Keys.Right))
+                _game.Players[1].Bus.Turn(deltaTime, TurnDirection.Right);
 
 
         }

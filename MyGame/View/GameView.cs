@@ -17,8 +17,7 @@ namespace MyGame.View
         private readonly GraphicsDevice _graphics;
         private Texture2D _busTexture;
 
-        public static Vector2 Position = GameLogic.Position;
-        public static float MoveSpeed = 200f;
+        private GameLogic _game;
 
         public GameView(SpriteBatch spriteBatch, GraphicsDevice graphics)
         {
@@ -26,21 +25,24 @@ namespace MyGame.View
             _graphics = graphics;
         }
 
-        public void LoadContent(ContentManager content)
+        public void LoadContent(ContentManager content, GameLogic game)
         {
             _busTexture = content.Load<Texture2D>("bus"); // Загрузка текстуры автобуса
+            _game = game;
         }
 
         public void Draw()
         {
+            
             _graphics.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin(); // Начинаем отрисовку
 
-            // Отрисовываем автобус
-            _spriteBatch.Draw(
+            foreach (var bus in _game.Buses)
+            {
+                _spriteBatch.Draw(
                 _busTexture,
-                position: Position,
+                position: bus.Position,
                 sourceRectangle: null,
                 color: Color.White,
                 rotation: 3.14f,
@@ -49,6 +51,8 @@ namespace MyGame.View
                 effects: SpriteEffects.FlipVertically,
                 layerDepth: 0
             );
+
+            }
 
             _spriteBatch.End();
 

@@ -4,46 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using MyGame.View;
 
 namespace MyGame.Model
 {
     public class Player
     {
-        public string Name { get; set; }
+        public string Name { get; }
         public float Points { get; set; }
 
-        public Player(string name, float points)
+        public Bus Bus { get; }
+        public Player(string name, Bus bus)
         {
             Name = name;
-            Points = points;
+            Bus = bus;
         }
     }
 
     public class Bus
     {
-        public float CurrentSpeed { get; private set; } = 60f; // Постоянная скорость (км/ч)
-        public bool IsBraking { get; set; } = false;
-        public float BrakeDeceleration { get; set; } = 5f; // Замедление (км/ч в секунду)
-        public Vector2 Position
-        { 
-            get { return Position; }
-            set { Position = value; }
+        private const float TurningSpeed = 200f;
+        public Vector2 Position { get; set; }
+        public enum TurnDirection { Left, Right }
+
+        public Bus(Vector2 startPosition)
+        {
+
+            Position = startPosition;
         }
 
-
-
-        public void UpdateSpeed(float deltaTime)
+        public void Turn(float deltaTime, TurnDirection direction)
         {
-            if (IsBraking)
+            Position += direction switch
             {
-                // Плавное торможение до полной остановки
-                CurrentSpeed = Math.Max(0, CurrentSpeed - BrakeDeceleration * deltaTime);
-            }
-            else
-            {
-                // Возврат к постоянной скорости
-                CurrentSpeed = 60f;
-            }
+                TurnDirection.Left => new Vector2(-TurningSpeed * deltaTime, 0),
+                TurnDirection.Right => new Vector2(TurningSpeed * deltaTime, 0),
+            };
         }
     }
 

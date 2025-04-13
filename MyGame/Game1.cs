@@ -16,6 +16,7 @@ namespace MyGame
         private GameServices _model;
         private GameView _view;
         private GameController _controller;
+        private GameLogic _game;
 
         public Game1()
         {
@@ -28,7 +29,8 @@ namespace MyGame
         {
             // Инициализация MVC
             _model = new GameServices();
-            _controller = new GameController(_model, _graphics);
+            _game = new GameLogic();
+            _controller = new GameController(_model, _graphics, _game);
             _controller.ExitGame += () => Exit();
 
             base.Initialize();
@@ -38,13 +40,12 @@ namespace MyGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _view = new GameView(_spriteBatch, GraphicsDevice);
-            _view.LoadContent(Content);
+            _view.LoadContent(Content, _game);
         }
 
         protected override void Update(GameTime gameTime)
         {
             _controller.HandleInput(gameTime); // Обработка ввода
-            //_view.HandleInput(gameTime);
             base.Update(gameTime);
         }
 

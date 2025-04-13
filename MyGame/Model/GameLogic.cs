@@ -7,19 +7,23 @@ using Microsoft.Xna.Framework;
 
 namespace MyGame.Model
 {
-    public static class GameLogic
+    public class GameLogic
     {
-        public static Vector2 Position = new Vector2(400, 400);
-        
-        public static Vector2 DriveBus(Bus bus, Vector2 vector)
+        public List<Bus> Buses { get; } = new List<Bus>();
+        public List<Player> Players { get; } = new List<Player>();
+
+        public GameLogic()
         {
-            Bus bus1 = new Bus();
-            bus1.Position = new Vector2(400, 400);
+            // Создаём автобусы (данные)
+            var bus1 = new Bus(new Vector2(400, 400));
+            var bus2 = new Bus(new Vector2(500, 500));
 
-            Position = bus1.Position;
+            Buses.Add(bus1);
+            Buses.Add(bus2);
 
-            return bus1.Position;
+            // Создаём игроков и связываем с автобусами
+            Players.Add(new Player("Игрок 1", bus1));
+            Players.Add(new Player("Игрок 2", bus2));
         }
-
     }
 }
