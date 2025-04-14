@@ -33,6 +33,10 @@ namespace MyGame
             _controller = new GameController(_model, _graphics, _game);
             _controller.ExitGame += () => Exit();
 
+            _graphics.PreferredBackBufferWidth = _model.ScreenWidth;  // Ширина окна
+            _graphics.PreferredBackBufferHeight = _model.ScreenHeight; // Высота окна
+            _graphics.ApplyChanges(); // Применяем изменения
+
             base.Initialize();
         }
 

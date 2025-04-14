@@ -16,6 +16,7 @@ namespace MyGame.View
         private readonly SpriteBatch _spriteBatch;
         private readonly GraphicsDevice _graphics;
         private Texture2D _busTexture;
+        private Texture2D _roadTexture;
 
         private GameLogic _game;
 
@@ -28,6 +29,7 @@ namespace MyGame.View
         public void LoadContent(ContentManager content, GameLogic game)
         {
             _busTexture = content.Load<Texture2D>("bus"); // Загрузка текстуры автобуса
+            _roadTexture = content.Load<Texture2D>("road2");
             _game = game;
         }
 
@@ -37,6 +39,13 @@ namespace MyGame.View
             _graphics.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin(); // Начинаем отрисовку
+
+            _spriteBatch.Draw
+                (
+                texture: _roadTexture,
+                position: Vector2.Zero, 
+                color: Color.White
+                );
 
             foreach (var bus in _game.Buses)
             {
