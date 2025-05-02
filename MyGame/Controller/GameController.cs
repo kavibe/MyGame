@@ -15,7 +15,6 @@ namespace MyGame.Controller
     {
         private readonly GameServices _model;
         private readonly GraphicsDeviceManager _graphics;
-
         private readonly GameLogic _game;
 
 
@@ -76,19 +75,23 @@ namespace MyGame.Controller
     public class BackgroundController
     {
         private readonly BackgroundModel _model;
+        private readonly GameLogic _gameLogic;
 
-        public BackgroundController(BackgroundModel model)
+        public BackgroundController(BackgroundModel model, GameLogic gameLogic)
         {
             _model = model;
+            _gameLogic = gameLogic;
         }
 
         public void Update(GameTime gameTime)
         {
             float delta = _model.ScrollSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            // Обновляем позиции через свойства
+            // Обновление позиции заднего фона
             _model.Position1 = new Vector2(_model.Position1.X, _model.Position1.Y + delta);
             _model.Position2 = new Vector2(_model.Position2.X, _model.Position2.Y + delta);
+
+            _gameLogic.UpdateTrafficCar(gameTime, _model.ScrollSpeed);
 
             if (_model.Position1.Y >= _model.Texture.Height)
                 _model.Position1 = new Vector2(_model.Position1.X,

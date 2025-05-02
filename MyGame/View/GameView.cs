@@ -17,7 +17,7 @@ namespace MyGame.View
         private readonly GraphicsDevice _graphics;
         private readonly BackgroundModel _backgroundModel;
         private Texture2D _busTexture;
-        private Texture2D _roadTexture;
+        private Texture2D _carTexture;
         private GameLogic _game;
 
         public GameView(SpriteBatch spriteBatch, GraphicsDevice graphics, BackgroundModel backgroundModel)
@@ -30,10 +30,10 @@ namespace MyGame.View
         public void LoadContent(ContentManager content, GameLogic game)
         {
             _busTexture = content.Load<Texture2D>("bus"); // Загрузка текстуры автобуса
-            _roadTexture = content.Load<Texture2D>("road2");
+            _carTexture = content.Load<Texture2D>("car");
             _game = game;
 
-            // Загрузка текстуры фона, если она еще не загружена
+            // Загрузка текстуры фона
             if (_backgroundModel.Texture == null)
             {
                 _backgroundModel.Texture = content.Load<Texture2D>("background");
@@ -48,15 +48,26 @@ namespace MyGame.View
 
             _spriteBatch.Begin(); // Начинаем отрисовку
 
-            // Отрисовка фона
+            // Отрисовка движущегося фона
             _spriteBatch.Draw(_backgroundModel.Texture, _backgroundModel.Position1, Color.White);
             _spriteBatch.Draw(_backgroundModel.Texture, _backgroundModel.Position2, Color.White);
 
-            // Отрисовка дороги (если используется)
-            // _spriteBatch.Draw(_roadTexture, Vector2.Zero, Color.White);
+            foreach (var car in _game.TrafficCars)
+            {
+                _spriteBatch.Draw(
+                    _carTexture,
+                    position: car.Position,
+                    sourceRectangle: null,
+                    color: Color.White,
+                    rotation: 3.14f,
+                    origin: new Vector2(0, 0),
+                    scale: 0.3f,
+                    effects: SpriteEffects.FlipVertically,
+                    layerDepth: 0
+                );
 
-            // Отрисовка всех автобусов
-            foreach (var bus in _game.Buses)
+                // Отрисовка всех автобусов
+                foreach (var bus in _game.Buses)
             {
                 _spriteBatch.Draw(
                     _busTexture,
@@ -69,6 +80,9 @@ namespace MyGame.View
                     effects: SpriteEffects.FlipVertically,
                     layerDepth: 0
                 );
+            }
+
+            
             }
 
             _spriteBatch.End();

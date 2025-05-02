@@ -14,6 +14,7 @@ namespace MyGame.Model
         private readonly string _name;
         private float _points;
         private readonly Bus _bus;
+        private readonly List<TrafficCar> _trafficCars;
 
         public string Name
         {
@@ -31,10 +32,16 @@ namespace MyGame.Model
             get => _bus;
         }
 
-        public Player(string name, Bus bus)
+        public List<TrafficCar> TrafficCar
+        {
+            get => _trafficCars;
+        }
+
+        public Player(string name, Bus bus, List<TrafficCar> trafficCars)
         {
             _name = name;
             _bus = bus;
+            _trafficCars = trafficCars;
         }
     }
 
@@ -62,8 +69,8 @@ namespace MyGame.Model
     public class Bus
     {
         public enum DriveDirection { Left, Right, Straight, Back }
-        private const float TurningSpeed = 200f;
-        private const float BoostSpeed = 330f;
+        private const float TurningSpeed = 250f;
+        private const float BoostSpeed = 320f;
         private Vector2 _position;
         private Rectangle _bounds;
 
@@ -90,7 +97,7 @@ namespace MyGame.Model
         {
             Vector2 turnLeftVector = new Vector2(-TurningSpeed * deltaTime, 0);
             Vector2 turnRightVector = new Vector2(TurningSpeed * deltaTime, 0);
-            Vector2 goStraightVector = new Vector2(0, -BoostSpeed * deltaTime);
+            Vector2 goStraightVector = new Vector2(0, -(BoostSpeed-60f) * deltaTime);
             Vector2 goBackVector = new Vector2(0, BoostSpeed * deltaTime);
 
             if (Position.X > Bounds.X && Position.X < Bounds.X + Bounds.Width)
@@ -120,6 +127,39 @@ namespace MyGame.Model
         }
     }
 
+    public class TrafficCar
+    {
+        private Vector2 _position;
+        private Rectangle _bounds;
+        private Texture2D _texture;
+        public const float CarSpeed = 300f;
+
+        public Vector2 Position
+        {
+            get => _position;
+            set => _position = value;
+        }
+
+        public Rectangle Bounds
+        {
+            get => _bounds;
+            set => _bounds = value;
+        }
+
+        public Texture2D Texture
+        {
+            get => _texture;
+            set => _texture = value;
+        }
+
+        public TrafficCar(Vector2 startPosition, Rectangle personalBounds)
+        {
+            Position = startPosition;
+            Bounds = personalBounds;
+        }
+    }
+
+
     public class TrafficSystem
     {
         public class TrafficLight
@@ -134,16 +174,6 @@ namespace MyGame.Model
             {
                 return true;
             }
-        }
-    }
-
-    public class Passenger
-    {
-        private bool IsInBus;
-
-        public void ToggleBusStatus()
-        {
-            IsInBus = !IsInBus;
         }
     }
 }

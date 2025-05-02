@@ -31,7 +31,7 @@ namespace MyGame
         {
             // Инициализация моделей
             _model = new GameServices();
-            _gameLogic = new GameLogic();
+            _gameLogic = new GameLogic(GraphicsDevice);
             _backgroundModel = new BackgroundModel();
 
             // Настройка графики
@@ -42,7 +42,7 @@ namespace MyGame
             // Инициализация контроллеров
             _controller = new GameController(_model, _graphics, _gameLogic);
             _controller.ExitGame += () => Exit();
-            _backgroundController = new BackgroundController(_backgroundModel);
+            _backgroundController = new BackgroundController(_backgroundModel, _gameLogic);
 
             base.Initialize();
         }

@@ -27,3 +27,4 @@ C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\C
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\obj\Debug\net8.0\MyGame.sourcelink.json
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\road.xnb
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\road2.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\car.xnb
