@@ -16,10 +16,10 @@ namespace MyGame.Model
         {
             // Создаём автобусы (данные)
             var bus1 = new Bus(new Vector2(800, 900), // Начальное местоположение
-                                new Rectangle(280, 800, 580, 900)); //Границы движения
+                                new Rectangle(280, 170, 580, 900)); //Границы движения
 
             var bus2 = new Bus(new Vector2(1800, 900), // Начальное местоположение
-                                new Rectangle(1270, 100, 590, 900)); //Границы движения
+                                new Rectangle(1270, 170, 590, 900)); //Границы движения
 
 
             Buses.Add(bus1);

@@ -61,8 +61,9 @@ namespace MyGame.Model
 
     public class Bus
     {
-        public enum TurnDirection { Left, Right }
+        public enum DriveDirection { Left, Right, Straight, Back }
         private const float TurningSpeed = 200f;
+        private const float BoostSpeed = 330f;
         private Vector2 _position;
         private Rectangle _bounds;
 
@@ -84,29 +85,36 @@ namespace MyGame.Model
             Bounds = personalBounds;
         }
 
-        public void Turn(float deltaTime, TurnDirection direction)
+
+        public void Drive(float deltaTime, DriveDirection direction)
         {
             Vector2 turnLeftVector = new Vector2(-TurningSpeed * deltaTime, 0);
             Vector2 turnRightVector = new Vector2(TurningSpeed * deltaTime, 0);
+            Vector2 goStraightVector = new Vector2(0, -BoostSpeed * deltaTime);
+            Vector2 goBackVector = new Vector2(0, BoostSpeed * deltaTime);
 
             if (Position.X > Bounds.X && Position.X < Bounds.X + Bounds.Width)
             {
                 Position += direction switch
                 {
-                    TurnDirection.Left => turnLeftVector,
-                    TurnDirection.Right => turnRightVector,
+                    DriveDirection.Left => turnLeftVector,
+                    DriveDirection.Right => turnRightVector,
+                    DriveDirection.Straight => goStraightVector,
+                    DriveDirection.Back => goBackVector,
                 };
             }
 
             if (Position.X <= Bounds.X)
-            {
                 Position += turnRightVector;
-            }
 
             if (Position.X >= Bounds.X + Bounds.Width)
-            {
                 Position += turnLeftVector;
-            }
+
+           if (Position.Y >= Bounds.Y)
+                Position += goStraightVector;
+
+            if (Position.Y <= Bounds.Y + Bounds.Height)
+                Position += goBackVector;
 
 
         }

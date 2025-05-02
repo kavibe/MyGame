@@ -41,14 +41,23 @@ namespace MyGame.Controller
             }
 
             if (keyboardState.IsKeyDown(Keys.A))
-                _game.Players[0].Bus.Turn(deltaTime, Bus.TurnDirection.Left);
+                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Left);
             if (keyboardState.IsKeyDown(Keys.D))
-                _game.Players[0].Bus.Turn(deltaTime, Bus.TurnDirection.Right);
+                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Right);
 
             if (keyboardState.IsKeyDown(Keys.Left))
-                _game.Players[1].Bus.Turn(deltaTime, TurnDirection.Left);
+                _game.Players[1].Bus.Drive(deltaTime, DriveDirection.Left);
             if (keyboardState.IsKeyDown(Keys.Right))
-                _game.Players[1].Bus.Turn(deltaTime, TurnDirection.Right);
+                _game.Players[1].Bus.Drive(deltaTime, DriveDirection.Right);
+
+            if (keyboardState.IsKeyDown(Keys.W))
+                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Straight);
+            if (keyboardState.IsKeyDown(Keys.S))
+                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Back);
+            if (keyboardState.IsKeyDown(Keys.Up))
+                _game.Players[1].Bus.Drive(deltaTime, Bus.DriveDirection.Straight);
+            if (keyboardState.IsKeyDown(Keys.Down))
+                _game.Players[1].Bus.Drive(deltaTime, Bus.DriveDirection.Back);
 
 
         }
