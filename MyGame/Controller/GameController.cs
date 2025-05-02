@@ -63,4 +63,31 @@ namespace MyGame.Controller
 
         public event Action ExitGame;
     }
+
+    public class BackgroundController
+    {
+        private readonly BackgroundModel _model;
+
+        public BackgroundController(BackgroundModel model)
+        {
+            _model = model;
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            float delta = _model.ScrollSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            // Обновляем позиции через свойства
+            _model.Position1 = new Vector2(_model.Position1.X, _model.Position1.Y + delta);
+            _model.Position2 = new Vector2(_model.Position2.X, _model.Position2.Y + delta);
+
+            if (_model.Position1.Y >= _model.Texture.Height)
+                _model.Position1 = new Vector2(_model.Position1.X,
+                    _model.Position2.Y - _model.Texture.Height);
+
+            if (_model.Position2.Y >= _model.Texture.Height)
+                _model.Position2 = new Vector2(_model.Position2.X,
+                    _model.Position1.Y - _model.Texture.Height);
+        }
+    }
 }

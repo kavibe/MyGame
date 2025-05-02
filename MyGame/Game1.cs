@@ -16,7 +16,9 @@ namespace MyGame
         private GameServices _model;
         private GameView _view;
         private GameController _controller;
-        private GameLogic _game;
+        private GameLogic _gameLogic;
+        private BackgroundModel _backgroundModel;
+        private BackgroundController _backgroundController;
 
         public Game1()
         {
@@ -27,15 +29,20 @@ namespace MyGame
 
         protected override void Initialize()
         {
-            // Инициализация MVC
+            // Инициализация моделей
             _model = new GameServices();
-            _game = new GameLogic();
-            _controller = new GameController(_model, _graphics, _game);
-            _controller.ExitGame += () => Exit();
+            _gameLogic = new GameLogic();
+            _backgroundModel = new BackgroundModel();
 
-            _graphics.PreferredBackBufferWidth = _model.ScreenWidth;  // Ширина окна
-            _graphics.PreferredBackBufferHeight = _model.ScreenHeight; // Высота окна
-            _graphics.ApplyChanges(); // Применяем изменения
+            // Настройка графики
+            _graphics.PreferredBackBufferWidth = _model.ScreenWidth;
+            _graphics.PreferredBackBufferHeight = _model.ScreenHeight;
+            _graphics.ApplyChanges();
+
+            // Инициализация контроллеров
+            _controller = new GameController(_model, _graphics, _gameLogic);
+            _controller.ExitGame += () => Exit();
+            _backgroundController = new BackgroundController(_backgroundModel);
 
             base.Initialize();
         }
@@ -43,21 +50,29 @@ namespace MyGame
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _view = new GameView(_spriteBatch, GraphicsDevice);
-            _view.LoadContent(Content, _game);
+
+            // Загрузка контента для фона
+            _backgroundModel.Texture = Content.Load<Texture2D>("road2");
+            _backgroundModel.Position1 = Vector2.Zero;
+            _backgroundModel.Position2 = new Vector2(0, _backgroundModel.Texture.Height);
+
+            // Инициализация представления
+            _view = new GameView(_spriteBatch, GraphicsDevice, _backgroundModel);
+            _view.LoadContent(Content, _gameLogic);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            _controller.HandleInput(gameTime); // Обработка ввода
+            _controller.HandleInput(gameTime);
+            _backgroundController.Update(gameTime);
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            _view.Draw(); // Отрисовка
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+            _view.Draw();
             base.Draw(gameTime);
         }
     }
-
 }

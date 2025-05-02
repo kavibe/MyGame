@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using MyGame.View;
 
 namespace MyGame.Model
@@ -34,6 +35,27 @@ namespace MyGame.Model
         {
             _name = name;
             _bus = bus;
+        }
+    }
+
+    public class BackgroundModel
+    {
+        public Texture2D Texture { get; set; }
+        public float ScrollSpeed { get; set; } = 200f;
+
+        private Vector2 _position1;
+        private Vector2 _position2;
+
+        public Vector2 Position1
+        {
+            get => _position1;
+            set => _position1 = value;
+        }
+
+        public Vector2 Position2
+        {
+            get => _position2;
+            set => _position2 = value;
         }
     }
 
