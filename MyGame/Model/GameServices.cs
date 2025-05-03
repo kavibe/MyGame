@@ -10,11 +10,34 @@ namespace MyGame.Model
 {
     public class GameServices
     {
-        public bool IsFullScreen { get; set; }
-        public int ScreenWidth { get; set; } = 1920;
-        public int ScreenHeight { get; set; } = 1080;
-        public bool IsPaused { get; set; } = false;
+        private bool _isFullScreen;
+        private int _screenWidth = 1920;
+        private int _screenHeight = 1080;
+        private bool _isPaused  = false;
 
+        public bool IsPaused
+        {
+            get => _isPaused; 
+            set => _isPaused = value;
+        }
+
+        public int ScreenHeight
+        {
+            get => _screenHeight;
+            set => _screenHeight = value;
+        }
+
+        public int ScreenWidth
+        {
+            get => _screenWidth;
+            set => _screenWidth = value;
+        }
+
+        public bool IsFullScreen
+        {
+            get => _isFullScreen; 
+            set => _isFullScreen = value;
+        }
         public void ToggleFullScreen()
         {
             IsFullScreen = !IsFullScreen;

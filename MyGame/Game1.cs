@@ -19,7 +19,7 @@ namespace MyGame
         private GameController _controller;
         private GameLogic _gameLogic;
         private BackgroundModel _backgroundModel;
-        private BackgroundController _backgroundController;
+        private BackgroundTrafficController _backgroundController;
 
         public Game1()
         {
@@ -32,8 +32,8 @@ namespace MyGame
         {
             // Инициализация моделей
             _model = new GameServices();
-            _gameLogic = new GameLogic(GraphicsDevice, _model);
             _backgroundModel = new BackgroundModel();
+            _gameLogic = new GameLogic(_backgroundModel);
 
             // Настройка графики
             _graphics.PreferredBackBufferWidth = _model.ScreenWidth;
@@ -43,7 +43,7 @@ namespace MyGame
             // Инициализация контроллеров
             _controller = new GameController(_model, _graphics, _gameLogic);
             _controller.ExitGame += () => Exit();
-            _backgroundController = new BackgroundController(_backgroundModel, _gameLogic);
+            _backgroundController = new BackgroundTrafficController(_backgroundModel, _gameLogic, GraphicsDevice);
 
             base.Initialize();
         }
@@ -52,14 +52,9 @@ namespace MyGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // Загрузка контента для фона
-            _backgroundModel.Texture = Content.Load<Texture2D>("road2");
-            _backgroundModel.Position1 = Vector2.Zero;
-            _backgroundModel.Position2 = new Vector2(0, _backgroundModel.Texture.Height);
-
             // Инициализация представления
-            _view = new GameView(_spriteBatch, GraphicsDevice, _backgroundModel, _model);
-            _view.LoadContent(Content, _gameLogic);
+            _view = new GameView(_spriteBatch, GraphicsDevice, _backgroundModel, _gameLogic);
+            _gameLogic.LoadContentModel(Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -71,7 +66,7 @@ namespace MyGame
 
             base.Update(gameTime);
 
-            _controller.HandleInput(gameTime);
+            _controller.Update(gameTime);
             _backgroundController.Update(gameTime);
 
             base.Update(gameTime);

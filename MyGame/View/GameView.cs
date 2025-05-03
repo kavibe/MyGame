@@ -17,32 +17,15 @@ namespace MyGame.View
         private readonly SpriteBatch _spriteBatch;
         private readonly GraphicsDevice _graphics;
         private readonly BackgroundModel _backgroundModel;
-        private Texture2D _busTexture;
-        private Texture2D _carTexture;
-        private GameLogic _game;
-        private GameServices _model;
+        private readonly GameLogic _game;
 
-        public GameView(SpriteBatch spriteBatch, GraphicsDevice graphics, BackgroundModel backgroundModel, GameServices model)
+
+        public GameView(SpriteBatch spriteBatch, GraphicsDevice graphics, BackgroundModel backgroundModel, GameLogic game)
         {
             _spriteBatch = spriteBatch;
             _graphics = graphics;
             _backgroundModel = backgroundModel;
-            _model = model;
-        }
-
-        public void LoadContent(ContentManager content, GameLogic game)
-        {
-            _busTexture = content.Load<Texture2D>("bus"); // Загрузка текстуры автобуса
-            _carTexture = content.Load<Texture2D>("car");
             _game = game;
-
-            // Загрузка текстуры фона
-            if (_backgroundModel.Texture == null)
-            {
-                _backgroundModel.Texture = content.Load<Texture2D>("background");
-                _backgroundModel.Position1 = Vector2.Zero;
-                _backgroundModel.Position2 = new Vector2(0, _backgroundModel.Texture.Height);
-            }
         }
 
         public void Draw()
@@ -51,16 +34,14 @@ namespace MyGame.View
 
             _spriteBatch.Begin(); // Начинаем отрисовку
 
-            
-
             // Отрисовка движущегося фона
             _spriteBatch.Draw(_backgroundModel.Texture, _backgroundModel.Position1, Color.White);
             _spriteBatch.Draw(_backgroundModel.Texture, _backgroundModel.Position2, Color.White);
 
-            foreach (var car in _game.TrafficCars)
+            foreach (var car in _game.TrafficCarsList)
             {
                 _spriteBatch.Draw(
-                    _carTexture,
+                    TrafficCars.Texture,
                     destinationRectangle:car.Position,
                     sourceRectangle: null,
                     color: Color.White,
@@ -70,11 +51,10 @@ namespace MyGame.View
                     layerDepth: 0
                 );
 
-                // Отрисовка всех автобусов
                 foreach (var bus in _game.Buses)
             {
                 _spriteBatch.Draw(
-                    _busTexture,
+                    Bus.Texture,
                     destinationRectangle: bus.Position,
                     sourceRectangle: null,
                     color: Color.White,

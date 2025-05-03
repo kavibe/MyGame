@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using MyGame.Model;
 using MyGame.View;
 using static MyGame.Model.Bus;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MyGame.Controller
 {
@@ -25,12 +26,15 @@ namespace MyGame.Controller
             _game = game;
         }
 
-        public void HandleInput(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             var keyboardState = Keyboard.GetState();
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            KeyboardState _prevKeyboardState;
+            ServicesKeys(keyboardState);
+            GameKeys(gameTime, keyboardState);
+        }
 
+        private void ServicesKeys(KeyboardState keyboardState)
+        {
             if (keyboardState.IsKeyDown(Keys.Escape))
                 ExitGame?.Invoke();
 
@@ -40,30 +44,72 @@ namespace MyGame.Controller
                 ApplyScreenSettings();
             }
 
-            if (keyboardState.IsKeyDown(Keys.P)) 
+            if (keyboardState.IsKeyDown(Keys.P))
                 _model.PutPause();
+        }
 
+        private void GameKeys(GameTime gameTime, KeyboardState keyboardState)
+        {
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             if (keyboardState.IsKeyDown(Keys.A))
-                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Left);
+                DriveBus(_game.Players[0].Bus, deltaTime, Bus.DriveDirection.Left);
             if (keyboardState.IsKeyDown(Keys.D))
-                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Right);
+                DriveBus(_game.Players[0].Bus, deltaTime, Bus.DriveDirection.Right);
 
             if (keyboardState.IsKeyDown(Keys.Left))
-                _game.Players[1].Bus.Drive(deltaTime, DriveDirection.Left);
+                DriveBus(_game.Players[1].Bus, deltaTime, DriveDirection.Left);
             if (keyboardState.IsKeyDown(Keys.Right))
-                _game.Players[1].Bus.Drive(deltaTime, DriveDirection.Right);
+                DriveBus(_game.Players[1].Bus, deltaTime, DriveDirection.Right);
 
             if (keyboardState.IsKeyDown(Keys.W))
-                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Straight);
+                DriveBus(_game.Players[0].Bus, deltaTime, Bus.DriveDirection.Straight);
             if (keyboardState.IsKeyDown(Keys.S))
-                _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Back);
+                DriveBus(_game.Players[0].Bus, deltaTime, Bus.DriveDirection.Back);
             if (keyboardState.IsKeyDown(Keys.Up))
-                _game.Players[1].Bus.Drive(deltaTime, Bus.DriveDirection.Straight);
+                DriveBus(_game.Players[1].Bus, deltaTime, Bus.DriveDirection.Straight);
             if (keyboardState.IsKeyDown(Keys.Down))
-                _game.Players[1].Bus.Drive(deltaTime, Bus.DriveDirection.Back);
+                DriveBus(_game.Players[1].Bus, deltaTime, Bus.DriveDirection.Back);
+        }
 
+        private void DriveBus(Bus bus, float deltaTime, DriveDirection direction)
+        {
+            float moveLeft = -TurningSpeed * deltaTime;
+            float moveRight = TurningSpeed * deltaTime;
+            float moveUp = -(BoostSpeed - 60f) * deltaTime;
+            float moveDown = (BoostSpeed + 50f) * deltaTime; 
 
+            // Временный прямоугольник для проверки границ
+            Rectangle newPosition = bus.Position;
+
+            switch (direction)
+            {
+                case DriveDirection.Left:
+                    newPosition.X += (int)moveLeft;
+                    break;
+                case DriveDirection.Right:
+                    newPosition.X += (int)moveRight;
+                    break;
+                case DriveDirection.Straight:
+                    newPosition.Y += (int)moveUp;
+                    break;
+                case DriveDirection.Back:
+                    newPosition.Y += (int)moveDown;
+                    break;
+            }
+
+            if (newPosition.X < bus.Bounds.X)
+                newPosition.X = bus.Bounds.X;
+            else if (newPosition.X + newPosition.Width > bus.Bounds.X + bus.Bounds.Width)
+                newPosition.X = bus.Bounds.X + bus.Bounds.Width - newPosition.Width;
+
+            if (newPosition.Y < bus.Bounds.Y)
+                newPosition.Y = bus.Bounds.Y;
+            else if (newPosition.Y + newPosition.Height > bus.Bounds.Y + bus.Bounds.Height)
+                newPosition.Y = bus.Bounds.Y + bus. Bounds.Height - newPosition.Height;
+
+            // Обновление позиции
+            bus.Position = newPosition;
         }
 
         private void ApplyScreenSettings()
@@ -75,37 +121,5 @@ namespace MyGame.Controller
         }
 
         public event Action ExitGame;
-    }
-
-    public class BackgroundController
-    {
-        private readonly BackgroundModel _model;
-        private readonly GameLogic _gameLogic;
-
-        public BackgroundController(BackgroundModel model, GameLogic gameLogic)
-        {
-            _model = model;
-            _gameLogic = gameLogic;
-        }
-
-        public void Update(GameTime gameTime)
-        {
-            float delta = _model.ScrollSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            // Обновление позиции заднего фона
-            _model.Position1 = new Vector2(_model.Position1.X, _model.Position1.Y + delta);
-            _model.Position2 = new Vector2(_model.Position2.X, _model.Position2.Y + delta);
-
-            _gameLogic.UpdateTrafficCar(gameTime, _model.ScrollSpeed);
-
-
-            if (_model.Position1.Y >= _model.Texture.Height)
-                _model.Position1 = new Vector2(_model.Position1.X,
-                    _model.Position2.Y - _model.Texture.Height);
-
-            if (_model.Position2.Y >= _model.Texture.Height)
-                _model.Position2 = new Vector2(_model.Position2.X,
-                    _model.Position1.Y - _model.Texture.Height);
-        }
     }
 }
