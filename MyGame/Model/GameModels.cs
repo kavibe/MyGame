@@ -70,85 +70,11 @@ namespace MyGame.Model
     {
         public enum DriveDirection { Left, Right, Straight, Back }
         private const float TurningSpeed = 250f;
-        private const float BoostSpeed = 320f;
-        private Vector2 _position;
+        private const float BoostSpeed = 350f;
+        private Rectangle _position;
         private Rectangle _bounds;
-        private Rectangle _positionRectangle;
 
-        public Rectangle PositionRectangle
-        {
-            get => _positionRectangle;
-            set => _positionRectangle = value;
-        }
-
-        public Vector2 Position
-        {
-            get => _position; 
-            set => _position = value;
-        }
-
-        public Rectangle Bounds
-        {
-            get => _bounds;
-            set => _bounds = value;
-        }
-
-        public Bus(Vector2 startPosition, Rectangle personalBounds)
-        {
-            Position = startPosition;
-            Bounds = personalBounds;
-        }
-
-
-        public void Drive(float deltaTime, DriveDirection direction)
-        {
-            Vector2 turnLeftVector = new Vector2(-TurningSpeed * deltaTime, 0);
-            Vector2 turnRightVector = new Vector2(TurningSpeed * deltaTime, 0);
-            Vector2 goStraightVector = new Vector2(0, -(BoostSpeed-60f) * deltaTime);
-            Vector2 goBackVector = new Vector2(0, BoostSpeed * deltaTime);
-
-            if (Position.X > Bounds.X && Position.X < Bounds.X + Bounds.Width)
-            {
-                Position += direction switch
-                {
-                    DriveDirection.Left => turnLeftVector,
-                    DriveDirection.Right => turnRightVector,
-                    DriveDirection.Straight => goStraightVector,
-                    DriveDirection.Back => goBackVector,
-                };
-            }
-
-            if (Position.X <= Bounds.X)
-                Position += turnRightVector;
-
-            if (Position.X >= Bounds.X + Bounds.Width)
-                Position += turnLeftVector;
-
-           if (Position.Y >= Bounds.Y)
-                Position += goStraightVector;
-
-            if (Position.Y <= Bounds.Y + Bounds.Height)
-                Position += goBackVector;
-
-
-        }
-    }
-
-    public class TrafficCar
-    {
-        private Vector2 _position;
-        private Rectangle _bounds;
-        private Texture2D _texture;
-        private Rectangle _positionRectangle;
-        public const float CarSpeed = 300f;
-
-        public Rectangle PositionRectangle
-        {
-            get => _positionRectangle;
-            set => _positionRectangle = value;
-        }
-
-        public Vector2 Position
+        public Rectangle Position
         {
             get => _position;
             set => _position = value;
@@ -160,34 +86,77 @@ namespace MyGame.Model
             set => _bounds = value;
         }
 
+        public Bus(Rectangle startPosition, Rectangle personalBounds)
+        {
+            Position = startPosition;
+            Bounds = personalBounds;
+        }
+
+        public void Drive(float deltaTime, DriveDirection direction)
+        {
+            // Рассчитываем смещения
+            float moveLeft = -TurningSpeed * deltaTime;
+            float moveRight = TurningSpeed * deltaTime;
+            float moveUp = -(BoostSpeed - 60f) * deltaTime; // "Straight" (вперёд)
+            float moveDown = (BoostSpeed+50f) * deltaTime; // "Back" (назад)
+
+            // Создаём временный прямоугольник для проверки границ
+            Rectangle newPosition = Position;
+
+            // Применяем движение в зависимости от направления
+            switch (direction)
+            {
+                case DriveDirection.Left:
+                    newPosition.X += (int)moveLeft;
+                    break;
+                case DriveDirection.Right:
+                    newPosition.X += (int)moveRight;
+                    break;
+                case DriveDirection.Straight:
+                    newPosition.Y += (int)moveUp;
+                    break;
+                case DriveDirection.Back:
+                    newPosition.Y += (int)moveDown;
+                    break;
+            }
+
+            // Проверяем границы и корректируем позицию
+            if (newPosition.X < Bounds.X)
+                newPosition.X = Bounds.X;
+            else if (newPosition.X + newPosition.Width > Bounds.X + Bounds.Width)
+                newPosition.X = Bounds.X + Bounds.Width - newPosition.Width;
+
+            if (newPosition.Y < Bounds.Y)
+                newPosition.Y = Bounds.Y;
+            else if (newPosition.Y + newPosition.Height > Bounds.Y + Bounds.Height)
+                newPosition.Y = Bounds.Y + Bounds.Height - newPosition.Height;
+
+            // Обновляем позицию
+            Position = newPosition;
+        }
+    }
+
+    public class TrafficCar
+    {
+        private Rectangle _position;
+        private Texture2D _texture;
+        public const float CarSpeed = 300f;
+
+        public Rectangle Position
+        {
+            get => _position;
+            set => _position = value;
+        }
+
         public Texture2D Texture
         {
             get => _texture;
             set => _texture = value;
         }
 
-        public TrafficCar(Vector2 startPosition, Rectangle personalBounds)
+        public TrafficCar(Rectangle startPosition)
         {
             Position = startPosition;
-            Bounds = personalBounds;
-        }
-    }
-
-
-    public class TrafficSystem
-    {
-        public class TrafficLight
-        {
-            private enum State { Red, Yellow, Green }
-            private State CurrentState { get; set; } //текущее состояние
-            private float Timer { get; set; }
-            private Vector2 StopLinePosition { get; set; } // Координаты стоп-линии
-            private float ActivationDistance { get; set; } = 10; // Дистанция срабатывания
-
-            public bool CheckBusRedTrafficLights()
-            {
-                return true;
-            }
         }
     }
 }

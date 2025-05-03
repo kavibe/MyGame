@@ -32,7 +32,7 @@ namespace MyGame
         {
             // Инициализация моделей
             _model = new GameServices();
-            _gameLogic = new GameLogic(GraphicsDevice);
+            _gameLogic = new GameLogic(GraphicsDevice, _model);
             _backgroundModel = new BackgroundModel();
 
             // Настройка графики

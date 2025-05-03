@@ -18,44 +18,46 @@ namespace MyGame.Model
         private List<TrafficCar> TrafficCarsPlayer2 { get; } = new List<TrafficCar>();
 
         private readonly GraphicsDevice _graphicsDevice;
+        private readonly GameServices _model;
         
 
-        public GameLogic(GraphicsDevice graphicsDevice)
+        public GameLogic(GraphicsDevice graphicsDevice, GameServices gameServices)
         {
             _graphicsDevice = graphicsDevice;
+            _model = gameServices;
 
-            // Создаём автобусы (данные)
-            var bus1 = new Bus(new Vector2(0, 0), // Начальное местоположение
-                                new Rectangle(280, 170, 580, 900)); //Границы движения
+            CreateBuses();
 
-            var bus2 = new Bus(new Vector2(1800, 900), // Начальное местоположение
-                                new Rectangle(1270, 170, 590, 900)); //Границы движения
+            CreateTraffic();
 
+            CreatePlayers();
+            
 
-            var car11 = new TrafficCar(new Vector2(820, 0),
-                                        new Rectangle(280, 170, 580, 900));
+        }
 
-            var car12 = new TrafficCar(new Vector2(600, -500),
-                                       new Rectangle(280, 170, 580, 900));
+        private void CreateBuses()
+        {
+            var bus1 = new Bus(new Rectangle(350, 1000, 250, 250), // Начальное местоположение
+                                new Rectangle(300, 220, 810, 1150)); //Границы движения
 
-            var car13 = new TrafficCar(new Vector2(600, -1000),
-                                       new Rectangle(280, 170, 580, 900));
+            var bus2 = new Bus(new Rectangle(1800, 1000, 250, 250), // Начальное местоположение
+                                new Rectangle(1300, 220, 810, 1150)); //Границы движения
 
-            var car14 = new TrafficCar(new Vector2(600, -1500),
-                                       new Rectangle(280, 170, 580, 900));
+            Buses.Add(bus1);
+            Buses.Add(bus2);
+        }
 
+        private void CreateTraffic()
+        {
+            var car11 = new TrafficCar(new Rectangle(820, 0, 150, 150));
+            var car12 = new TrafficCar(new Rectangle(600, -500, 150, 150));
+            var car13 = new TrafficCar(new Rectangle(600, -1000, 150, 150));
+            var car14 = new TrafficCar(new Rectangle(600, -1500, 150, 150));
 
-            var car21 = new TrafficCar(new Vector2(1270, 0),
-                                        new Rectangle(280, 170, 580, 900));
-
-            var car22 = new TrafficCar(new Vector2(1400, -500),
-                                       new Rectangle(280, 170, 580, 900));
-
-            var car23 = new TrafficCar(new Vector2(1600, -1000),
-                                       new Rectangle(280, 170, 580, 900));
-
-            var car24 = new TrafficCar(new Vector2(1750, -1500),
-                                       new Rectangle(280, 170, 580, 900));
+            var car21 = new TrafficCar(new Rectangle(1270, 0, 150, 150));
+            var car22 = new TrafficCar(new Rectangle(1400, -500, 150, 150));
+            var car23 = new TrafficCar(new Rectangle(1600, -1000, 150, 150));
+            var car24 = new TrafficCar(new Rectangle(1750, -1500, 150, 150));
 
             TrafficCars.Add(car11);
             TrafficCars.Add(car12);
@@ -75,24 +77,30 @@ namespace MyGame.Model
             TrafficCarsPlayer2.Add(car22);
             TrafficCarsPlayer2.Add(car23);
             TrafficCarsPlayer2.Add(car24);
+        }
 
-            Buses.Add(bus1);
-            Buses.Add(bus2);
-
-            // Создаём игроков и связываем с автобусами
-            Players.Add(new Player("Игрок 1", bus1, [car11, car12, car13, car14]));
-            Players.Add(new Player("Игрок 2", bus2, [car21, car22, car23, car24]));
+        private void CreatePlayers()
+        {
+            Players.Add(new Player("Игрок 1", Buses[0], TrafficCarsPlayer1));
+            Players.Add(new Player("Игрок 2", Buses[1], TrafficCarsPlayer2));
         }
 
         public void UpdateTrafficCar(GameTime gameTime, float backgroundSpeed)
         {
+            //Intersects();
             foreach (var car in TrafficCars)
             {
                 float delta = GetTrafficCarSpeed(backgroundSpeed) * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                car.Position = new Vector2(car.Position.X, car.Position.Y + delta);
+                // Обновляем позицию через Rectangle
+                car.Position = new Rectangle(
+                    car.Position.X,
+                    car.Position.Y + (int)delta,
+                    car.Position.Width,
+                    car.Position.Height
+                );
 
-                if (car.Position.Y > _graphicsDevice.Viewport.Height+100)
+                if (car.Position.Y > _graphicsDevice.Viewport.Height + 100)
                     RespawnCar(car);
             }
         }
@@ -102,10 +110,23 @@ namespace MyGame.Model
             Random random = new Random();
 
             if (TrafficCarsPlayer1.Contains(car))
-                car.Position = new Vector2(random.Next(280, 820), 0);
-
+            {
+                car.Position = new Rectangle(
+                    random.Next(280, 820),
+                    0 - car.Position.Height,  // Появляемся над экраном
+                    car.Position.Width,
+                    car.Position.Height
+                );
+            }
             else
-                car.Position = new Vector2(random.Next(1270, 1860), 0);
+            {
+                car.Position = new Rectangle(
+                    random.Next(1220, 1860),
+                    0 - car.Position.Height,
+                    car.Position.Width,
+                    car.Position.Height
+                );
+            }
         }
 
         private float GetTrafficCarSpeed(float backgroundSpeed)
@@ -116,7 +137,15 @@ namespace MyGame.Model
 
         //public void Intersects()
         //{
-        //    if (Players[0].Bus.Position.Intersects())
+        //    if (Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[0].Position) ||
+        //        Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[1].Position) ||
+        //        Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[2].Position) ||
+        //        Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[3].Position) ||
+        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[0].Position) ||
+        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[1].Position) ||
+        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[2].Position) ||
+        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[3].Position)) 
+        //        _model.PutPause();
         //}
     }
 }

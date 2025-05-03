@@ -98,6 +98,7 @@ namespace MyGame.Controller
 
             _gameLogic.UpdateTrafficCar(gameTime, _model.ScrollSpeed);
 
+
             if (_model.Position1.Y >= _model.Texture.Height)
                 _model.Position1 = new Vector2(_model.Position1.X,
                     _model.Position2.Y - _model.Texture.Height);

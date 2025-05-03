@@ -61,12 +61,11 @@ namespace MyGame.View
             {
                 _spriteBatch.Draw(
                     _carTexture,
-                    position: car.Position,
+                    destinationRectangle:car.Position,
                     sourceRectangle: null,
                     color: Color.White,
                     rotation: 3.14f,
                     origin: new Vector2(0, 0),
-                    scale: 0.3f,
                     effects: SpriteEffects.FlipVertically,
                     layerDepth: 0
                 );
@@ -76,12 +75,11 @@ namespace MyGame.View
             {
                 _spriteBatch.Draw(
                     _busTexture,
-                    position: bus.Position,
+                    destinationRectangle: bus.Position,
                     sourceRectangle: null,
                     color: Color.White,
                     rotation: 3.14f,
                     origin: new Vector2(0, 0),
-                    scale: 0.3f,
                     effects: SpriteEffects.FlipVertically,
                     layerDepth: 0
                 );
