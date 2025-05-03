@@ -29,6 +29,7 @@ namespace MyGame.Controller
         {
             var keyboardState = Keyboard.GetState();
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            KeyboardState _prevKeyboardState;
 
             if (keyboardState.IsKeyDown(Keys.Escape))
                 ExitGame?.Invoke();
@@ -38,6 +39,10 @@ namespace MyGame.Controller
                 _model.ToggleFullScreen();
                 ApplyScreenSettings();
             }
+
+            if (keyboardState.IsKeyDown(Keys.P)) 
+                _model.PutPause();
+
 
             if (keyboardState.IsKeyDown(Keys.A))
                 _game.Players[0].Bus.Drive(deltaTime, Bus.DriveDirection.Left);

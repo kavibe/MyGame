@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MyGame.Controller;
@@ -57,14 +58,22 @@ namespace MyGame
             _backgroundModel.Position2 = new Vector2(0, _backgroundModel.Texture.Height);
 
             // Инициализация представления
-            _view = new GameView(_spriteBatch, GraphicsDevice, _backgroundModel);
+            _view = new GameView(_spriteBatch, GraphicsDevice, _backgroundModel, _model);
             _view.LoadContent(Content, _gameLogic);
         }
 
         protected override void Update(GameTime gameTime)
         {
+            if (_model.IsPaused)
+            {
+                gameTime = new GameTime(gameTime.TotalGameTime, TimeSpan.Zero);
+            }
+
+            base.Update(gameTime);
+
             _controller.HandleInput(gameTime);
             _backgroundController.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -72,6 +81,13 @@ namespace MyGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _view.Draw();
+
+
+            if (_model.IsPaused)
+            {
+                gameTime = new GameTime(gameTime.TotalGameTime, TimeSpan.Zero);
+            }
+
             base.Draw(gameTime);
         }
     }

@@ -25,35 +25,36 @@ namespace MyGame.Model
             _graphicsDevice = graphicsDevice;
 
             // Создаём автобусы (данные)
-            var bus1 = new Bus(new Vector2(800, 900), // Начальное местоположение
+            var bus1 = new Bus(new Vector2(0, 0), // Начальное местоположение
                                 new Rectangle(280, 170, 580, 900)); //Границы движения
 
             var bus2 = new Bus(new Vector2(1800, 900), // Начальное местоположение
                                 new Rectangle(1270, 170, 590, 900)); //Границы движения
 
-            var car11 = new TrafficCar(new Vector2(820, -50),
+
+            var car11 = new TrafficCar(new Vector2(820, 0),
                                         new Rectangle(280, 170, 580, 900));
 
-            var car12 = new TrafficCar(new Vector2(600, -400),
+            var car12 = new TrafficCar(new Vector2(600, -500),
                                        new Rectangle(280, 170, 580, 900));
 
-            var car13 = new TrafficCar(new Vector2(600, -800),
+            var car13 = new TrafficCar(new Vector2(600, -1000),
                                        new Rectangle(280, 170, 580, 900));
 
-            var car14 = new TrafficCar(new Vector2(600, -1400),
+            var car14 = new TrafficCar(new Vector2(600, -1500),
                                        new Rectangle(280, 170, 580, 900));
 
 
-            var car21 = new TrafficCar(new Vector2(1270, -50),
+            var car21 = new TrafficCar(new Vector2(1270, 0),
                                         new Rectangle(280, 170, 580, 900));
 
-            var car22 = new TrafficCar(new Vector2(1400, -400),
+            var car22 = new TrafficCar(new Vector2(1400, -500),
                                        new Rectangle(280, 170, 580, 900));
 
-            var car23 = new TrafficCar(new Vector2(1600, -800),
+            var car23 = new TrafficCar(new Vector2(1600, -1000),
                                        new Rectangle(280, 170, 580, 900));
 
-            var car24 = new TrafficCar(new Vector2(1860, -1400),
+            var car24 = new TrafficCar(new Vector2(1750, -1500),
                                        new Rectangle(280, 170, 580, 900));
 
             TrafficCars.Add(car11);
@@ -85,10 +86,10 @@ namespace MyGame.Model
 
         public void UpdateTrafficCar(GameTime gameTime, float backgroundSpeed)
         {
-            float delta = (backgroundSpeed+100f) * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
             foreach (var car in TrafficCars)
             {
+                float delta = GetTrafficCarSpeed(backgroundSpeed) * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
                 car.Position = new Vector2(car.Position.X, car.Position.Y + delta);
 
                 if (car.Position.Y > _graphicsDevice.Viewport.Height+100)
@@ -99,17 +100,23 @@ namespace MyGame.Model
         private void RespawnCar(TrafficCar car)
         {
             Random random = new Random();
-            if(TrafficCarsPlayer1.Contains(car))
+
+            if (TrafficCarsPlayer1.Contains(car))
                 car.Position = new Vector2(random.Next(280, 820), 0);
+
             else
                 car.Position = new Vector2(random.Next(1270, 1860), 0);
         }
 
-        //private int GetRandomLane()
+        private float GetTrafficCarSpeed(float backgroundSpeed)
+        {
+            Random random = new Random();
+            return backgroundSpeed + random.Next(50, 150); 
+        }
+
+        //public void Intersects()
         //{
-        //    //int[] lanes = Enumerable.Range(280, 820).ToArray(); // X-координаты полос
-        //    //return lanes[_random.Next(lanes.Length)];
-        //    return _random.Next(280, 820);
+        //    if (Players[0].Bus.Position.Intersects())
         //}
     }
 }

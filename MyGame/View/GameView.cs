@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using MyGame.Model;
 using MyGame;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MyGame.View
 {
@@ -19,12 +20,14 @@ namespace MyGame.View
         private Texture2D _busTexture;
         private Texture2D _carTexture;
         private GameLogic _game;
+        private GameServices _model;
 
-        public GameView(SpriteBatch spriteBatch, GraphicsDevice graphics, BackgroundModel backgroundModel)
+        public GameView(SpriteBatch spriteBatch, GraphicsDevice graphics, BackgroundModel backgroundModel, GameServices model)
         {
             _spriteBatch = spriteBatch;
             _graphics = graphics;
             _backgroundModel = backgroundModel;
+            _model = model;
         }
 
         public void LoadContent(ContentManager content, GameLogic game)
@@ -47,6 +50,8 @@ namespace MyGame.View
             _graphics.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin(); // Начинаем отрисовку
+
+            
 
             // Отрисовка движущегося фона
             _spriteBatch.Draw(_backgroundModel.Texture, _backgroundModel.Position1, Color.White);
@@ -82,7 +87,9 @@ namespace MyGame.View
                 );
             }
 
-            
+                
+
+
             }
 
             _spriteBatch.End();

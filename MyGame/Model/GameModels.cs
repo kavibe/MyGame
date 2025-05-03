@@ -73,6 +73,13 @@ namespace MyGame.Model
         private const float BoostSpeed = 320f;
         private Vector2 _position;
         private Rectangle _bounds;
+        private Rectangle _positionRectangle;
+
+        public Rectangle PositionRectangle
+        {
+            get => _positionRectangle;
+            set => _positionRectangle = value;
+        }
 
         public Vector2 Position
         {
@@ -132,7 +139,14 @@ namespace MyGame.Model
         private Vector2 _position;
         private Rectangle _bounds;
         private Texture2D _texture;
+        private Rectangle _positionRectangle;
         public const float CarSpeed = 300f;
+
+        public Rectangle PositionRectangle
+        {
+            get => _positionRectangle;
+            set => _positionRectangle = value;
+        }
 
         public Vector2 Position
         {
