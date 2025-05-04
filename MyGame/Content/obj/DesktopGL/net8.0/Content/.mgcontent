@@ -6,10 +6,14 @@
   <SourceFiles>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bus.png</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/car.png</File>
+    <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/File.xml</File>
+    <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/font.spritefont</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/road.png</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/road2.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

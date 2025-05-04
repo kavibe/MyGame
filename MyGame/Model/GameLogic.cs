@@ -100,6 +100,10 @@ namespace MyGame.Model
 
         public void LoadContentModel(ContentManager content)
         {
+            PauseModel.Background = content.Load<Texture2D>("road2");
+            PauseModel.Font = content.Load<SpriteFont>("font");
+            MenuModel.Font = content.Load<SpriteFont>("font");
+            MenuModel.Background = content.Load<Texture2D>("road2");
             Bus.Texture = content.Load<Texture2D>("bus");
             TrafficCars.Texture = content.Load<Texture2D>("car");
             _backgroundModel.Texture = content.Load<Texture2D>("road2");

@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/car.png","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/car.xnb","TextureProcessor","Texture2DContent",45262,840757,0,3208799
+"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/File.xml","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/File.xnb","PassThroughProcessor","Object",144,177,0,2378764
+"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/font.spritefont","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/font.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21538,0,1705801

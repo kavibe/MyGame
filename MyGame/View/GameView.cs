@@ -32,6 +32,7 @@ namespace MyGame.View
         {
             _graphics.Clear(Color.CornflowerBlue);
 
+
             _spriteBatch.Begin(); // Начинаем отрисовку
 
             // Отрисовка движущегося фона
