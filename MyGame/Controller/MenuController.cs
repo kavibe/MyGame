@@ -11,16 +11,14 @@ namespace MyGame.Controller
 {
     public class MenuController
     {
-        private readonly MenuModel _model;
 
-        public MenuController(MenuModel model)
+        public MenuController()
         {
-            _model = model;
         }
 
         public void Update(GameTime gameTime)
         {
-            if (GameStateManager.Instance.CurrentState == GameState.Menu && Keyboard.GetState().IsKeyDown(Keys.Enter))
+            if (GameStateManager.Instance.CurrentState == GameState.Menu && Keyboard.GetState().IsKeyDown(Keys.Space))
                 GameStateManager.Instance.CurrentState = GameState.Playing;
 
             if (Keyboard.GetState().IsKeyDown(Keys.F4) && (GameStateManager.Instance.CurrentState == GameState.Menu))

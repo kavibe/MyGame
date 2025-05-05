@@ -11,7 +11,7 @@ using MyGame.View;
 
 namespace MyGame
 {
-    public enum GameState{ Menu, Playing, Paused}
+    public enum GameState{ Menu, Playing, Paused, Loss}
     public class GameStateManager
     {
         private static GameStateManager _instance;
@@ -29,12 +29,14 @@ namespace MyGame
             OnStateChanged?.Invoke(newState);
         }
 
-        public static void UpdateController(MenuController _menuController, GameController _controller, BackgroundTrafficController _backgroundController, GameTime gameTime, GameServices _model)
+        public static void UpdateController(MenuController _menuController, GameController _controller, BackgroundTrafficController _backgroundController, 
+            GameTime gameTime, GameServices _model, LossController _lossController)
         {
             switch (Instance.CurrentState)
             {
                 case GameState.Menu:
                     _menuController.Update(gameTime);
+                    _controller.Update(gameTime);
                     break;
 
                 case GameState.Playing:
@@ -49,10 +51,16 @@ namespace MyGame
                     _controller.Update(gameTime);
                     _backgroundController.Update(gameTime);
                     break;
+
+                case GameState.Loss:
+                    gameTime = new GameTime(gameTime.TotalGameTime, TimeSpan.Zero);
+                    _lossController.Update();
+                    break;
+
             }
         }
 
-        public static void UpdateDraw(MenuView _menuView, GameView _view, PauseView _pauseView)
+        public static void UpdateDraw(MenuView _menuView, GameView _view, PauseView _pauseView, LossView _lossView)
         {
             switch (Instance.CurrentState)
             {
@@ -67,9 +75,11 @@ namespace MyGame
                 case GameState.Paused:
                     _view.Draw();
                     _pauseView.Draw();
+                    break;
 
-                    
-
+                case GameState.Loss:
+                    _view.Draw();
+                    _lossView.Draw();
                     break;
             }
         }

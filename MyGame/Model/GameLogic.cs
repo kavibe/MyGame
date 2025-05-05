@@ -15,11 +15,21 @@ namespace MyGame.Model
         private readonly List<Bus> _buses = new List<Bus>();
         private readonly List<Player> _players = new List<Player>();
         private readonly List<TrafficCars> _trafficCarsList = new List<TrafficCars>();
-        private List<TrafficCars> TrafficCarsPlayer1 {  get; } = new List<TrafficCars>();
-        private List<TrafficCars> TrafficCarsPlayer2 { get; } = new List<TrafficCars>();
+        private List<TrafficCars> _trafficCarsPlayer1  = new List<TrafficCars>();
+        private List<TrafficCars> _trafficCarsPlayer2  = new List<TrafficCars>();
 
         private readonly BackgroundModel _backgroundModel;
-        
+
+        public List<TrafficCars> TrafficCarsPlayer1
+        {
+            get => _trafficCarsPlayer1;
+        }
+
+        public List<TrafficCars> TrafficCarsPlayer2
+        {
+            get => _trafficCarsPlayer2;
+        }
+
         public List<Bus> Buses
         {
             get => _buses;
@@ -44,8 +54,6 @@ namespace MyGame.Model
             CreateTraffic();
 
             CreatePlayers();
-            
-
         }
 
         private void CreateBuses()
@@ -100,12 +108,13 @@ namespace MyGame.Model
 
         public void LoadContentModel(ContentManager content)
         {
-            PauseModel.Background = content.Load<Texture2D>("road2");
-            PauseModel.Font = content.Load<SpriteFont>("font");
-            MenuModel.Font = content.Load<SpriteFont>("font");
-            MenuModel.Background = content.Load<Texture2D>("road2");
+            LossModel.Background = content.Load<Texture2D>("loss");
+            PauseModel.Background = content.Load<Texture2D>("pause");
+            MenuModel.Background = content.Load<Texture2D>("menu2");
+
             Bus.Texture = content.Load<Texture2D>("bus");
             TrafficCars.Texture = content.Load<Texture2D>("car");
+
             _backgroundModel.Texture = content.Load<Texture2D>("road2");
             _backgroundModel.Position1 = Vector2.Zero;
             _backgroundModel.Position2 = new Vector2(0, _backgroundModel.Texture.Height);

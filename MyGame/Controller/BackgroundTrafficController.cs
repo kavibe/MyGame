@@ -47,7 +47,6 @@ namespace MyGame.Controller
 
         public void UpdateTrafficCar(GameTime gameTime)
         {
-            //Intersects();
             foreach (var car in _gameLogic.TrafficCarsList)
             {
                 float backgroundSpeed = _model.ScrollSpeed;
@@ -94,18 +93,5 @@ namespace MyGame.Controller
             Random random = new Random();
             return backgroundSpeed + random.Next(50, 150);
         }
-
-        //public void Intersects()
-        //{
-        //    if (Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[0].Position) ||
-        //        Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[1].Position) ||
-        //        Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[2].Position) ||
-        //        Players[0].Bus.Position.Intersects(TrafficCarsPlayer1[3].Position) ||
-        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[0].Position) ||
-        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[1].Position) ||
-        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[2].Position) ||
-        //        Players[1].Bus.Position.Intersects(TrafficCarsPlayer2[3].Position)) 
-        //        _model.PutPause();
-        //}
     }
 }

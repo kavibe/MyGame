@@ -16,17 +16,19 @@ namespace MyGame
 
         // MVC Компоненты
         private GameServices _model;
-        private GameView _view;
-        private GameController _controller;
+        private MenuModel _menuModel;
+        private LossModel _lossModel;
         private GameLogic _gameLogic;
         private BackgroundModel _backgroundModel;
-        private BackgroundTrafficController _backgroundController;
-        private MenuModel _menuModel;
-        private MenuController _menuController; 
+        private GameView _view;
         private MenuView _menuView;
         private PauseView _pauseView;
-
-        private Viewport _viewport;
+        private LossView _lossView;
+        private GameController _controller;
+        private BackgroundTrafficController _backgroundController;       
+        private MenuController _menuController;     
+        private LossController _lossController;
+        
 
         public Game1()
         {
@@ -44,6 +46,8 @@ namespace MyGame
             _backgroundModel = new BackgroundModel();
             _gameLogic = new GameLogic(_backgroundModel);
             _menuModel = new MenuModel();
+            _lossModel = new LossModel();
+
 
             // Настройка графики
             _graphics.PreferredBackBufferWidth = _model.ScreenWidth;
@@ -51,33 +55,32 @@ namespace MyGame
             _graphics.ApplyChanges();
 
             // Инициализация контроллеров
-            _controller = new GameController(_model, _graphics, _gameLogic);
-            _controller.ExitGame += () => Exit();
+            _controller = new GameController(_model, _graphics, _gameLogic, _lossModel);
             _backgroundController = new BackgroundTrafficController(_backgroundModel, _gameLogic, GraphicsDevice);
-            _menuController = new MenuController(_menuModel);
+            _menuController = new MenuController();
+            _lossController = new LossController();
+
+            _controller.ExitGame += () => Exit();
             _menuController.ExitGame += () => Exit();
+            
             base.Initialize();
         }
 
-        protected override void LoadContent()
+        protected override void LoadContent() 
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _gameLogic.LoadContentModel(Content);
 
             _view = new GameView(_spriteBatch, GraphicsDevice, _backgroundModel, _gameLogic);
-            _menuView = new MenuView(_menuModel, _spriteBatch);
-            _viewport = new Viewport();
-            _pauseView = new PauseView(_spriteBatch, _viewport);
+            _menuView = new MenuView(_spriteBatch);
+            _pauseView = new PauseView(_spriteBatch);
+            _lossView = new LossView(_spriteBatch);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            
-
-            base.Update(gameTime);
-
-            GameStateManager.UpdateController(_menuController, _controller, _backgroundController, gameTime, _model);
+            GameStateManager.UpdateController(_menuController, _controller, _backgroundController, gameTime, _model, _lossController);
 
             base.Update(gameTime);
         }
@@ -86,12 +89,7 @@ namespace MyGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            if (_model.IsPaused)
-            {
-                gameTime = new GameTime(gameTime.TotalGameTime, TimeSpan.Zero);
-            }
-
-            GameStateManager.UpdateDraw(_menuView, _view, _pauseView);
+            GameStateManager.UpdateDraw(_menuView, _view, _pauseView, _lossView);
 
             base.Draw(gameTime);
         }

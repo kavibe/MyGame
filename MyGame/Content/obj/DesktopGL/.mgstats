@@ -1,3 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/File.xml","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/File.xnb","PassThroughProcessor","Object",144,177,0,2378764
-"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/font.spritefont","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/font.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21538,0,1705801
+"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/loss.png","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/loss.xnb","TextureProcessor","Texture2DContent",12414,10058605,0,48583

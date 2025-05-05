@@ -33,7 +33,7 @@ namespace MyGame.View
             _graphics.Clear(Color.CornflowerBlue);
 
 
-            _spriteBatch.Begin(); // Начинаем отрисовку
+            _spriteBatch.Begin();
 
             // Отрисовка движущегося фона
             _spriteBatch.Draw(_backgroundModel.Texture, _backgroundModel.Position1, Color.White);
@@ -53,22 +53,18 @@ namespace MyGame.View
                 );
 
                 foreach (var bus in _game.Buses)
-            {
-                _spriteBatch.Draw(
-                    Bus.Texture,
-                    destinationRectangle: bus.Position,
-                    sourceRectangle: null,
-                    color: Color.White,
-                    rotation: 3.14f,
-                    origin: new Vector2(0, 0),
-                    effects: SpriteEffects.FlipVertically,
-                    layerDepth: 0
-                );
-            }
-
-                
-
-
+                {
+                    _spriteBatch.Draw(
+                        Bus.Texture,
+                        destinationRectangle: bus.Position,
+                        sourceRectangle: null,
+                        color: Color.White,
+                        rotation: 3.14f,
+                        origin: new Vector2(0, 0),
+                        effects: SpriteEffects.FlipVertically,
+                        layerDepth: 0
+                    );
+                }
             }
 
             _spriteBatch.End();

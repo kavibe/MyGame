@@ -30,3 +30,7 @@ C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\C
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\car.xnb
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\File.xnb
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\font.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\menu1.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\menu2.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\pause.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\loss.xnb

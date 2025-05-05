@@ -17,22 +17,27 @@ namespace MyGame.Controller
         private readonly GameServices _model;
         private readonly GraphicsDeviceManager _graphics;
         private readonly GameLogic _game;
-        private InputAction _pauseAction;
-        private InputAction _fullscreenAction;
+        private readonly InputAction _pauseAction;
+        private readonly InputAction _fullscreenAction;
+        private readonly LossModel _lossModel;
 
 
-        public GameController(GameServices model, GraphicsDeviceManager graphics, GameLogic game)
+        public GameController(GameServices model, GraphicsDeviceManager graphics, GameLogic game, LossModel lossModel)
         {
             _model = model;
             _graphics = graphics;
             _game = game;
+            _lossModel = lossModel;
             _pauseAction = new InputAction(new[] { Keys.Escape }, true);
             _fullscreenAction = new InputAction(new[] { Keys.F11 });
+
         }
 
         public void Update(GameTime gameTime)
         {
             var keyboardState = Keyboard.GetState();
+
+            //CollisionCheck(); // Пока работает не совсем как надо
 
             _pauseAction.Update();
             _fullscreenAction.Update();
@@ -41,21 +46,13 @@ namespace MyGame.Controller
             HandleGameInput(gameTime);
         }
 
-        public void PutPause()
-        {
-            _model.IsPaused = !_model.IsPaused;
-        }
-
         private void HandleGlobalInput()
         {
-            if (_pauseAction.IsTriggered)
+            if (_pauseAction.IsTriggered && GameStateManager.Instance.CurrentState != GameState.Menu)
                 TogglePause();
 
             if (_fullscreenAction.IsTriggered)
                 ToggleFullscreen();
-
-            //if (Keyboard.GetState().IsKeyDown(Keys.F4) && (GameStateManager.Instance.CurrentState == GameState.Playing))
-            //    ExitGame?.Invoke();
 
             if (Keyboard.GetState().IsKeyDown(Keys.F4) && GameStateManager.Instance.CurrentState == GameState.Paused)
                 GameStateManager.Instance.ChangeState(GameState.Menu);
@@ -103,6 +100,23 @@ namespace MyGame.Controller
         {
             _model.ToggleFullScreen();
             ApplyScreenSettings();
+        }
+
+        public void CollisionCheck()
+        {
+            if (_game.Players[0].Bus.Position.Intersects(_game.TrafficCarsPlayer1[0].Position) ||
+                 _game.Players[0].Bus.Position.Intersects(_game.TrafficCarsPlayer1[1].Position) ||
+                 _game.Players[0].Bus.Position.Intersects(_game.TrafficCarsPlayer1[2].Position) ||
+                 _game.Players[0].Bus.Position.Intersects(_game.TrafficCarsPlayer1[3].Position) ||
+                 _game.Players[1].Bus.Position.Intersects(_game.TrafficCarsPlayer2[0].Position) ||
+                 _game.Players[1].Bus.Position.Intersects(_game.TrafficCarsPlayer2[1].Position) ||
+                 _game.Players[1].Bus.Position.Intersects(_game.TrafficCarsPlayer2[2].Position) ||
+                 _game.Players[1].Bus.Position.Intersects(_game.TrafficCarsPlayer2[3].Position))
+                _lossModel.IsLose = true;
+
+            if (_lossModel.IsLose)
+                GameStateManager.Instance.ChangeState(GameState.Loss);
+
         }
 
         private void DriveBus(Bus bus, float deltaTime, DriveDirection direction)
@@ -154,33 +168,5 @@ namespace MyGame.Controller
         }
 
         public event Action ExitGame;
-    }
-
-    public class InputAction
-    {
-        private readonly Keys[] _keys;
-        private readonly bool _singleTrigger;
-        private bool _wasPressed;
-
-        public bool IsTriggered { get; private set; }
-
-        public InputAction(Keys[] keys, bool singleTrigger = false)
-        {
-            _keys = keys;
-            _singleTrigger = singleTrigger;
-        }
-
-        public void Update()
-        {
-            IsTriggered = false;
-            bool isPressed = _keys.Any(key => Keyboard.GetState().IsKeyDown(key));
-
-            if (isPressed && (!_wasPressed || !_singleTrigger))
-            {
-                IsTriggered = true;
-            }
-
-            _wasPressed = isPressed;
-        }
     }
 }
