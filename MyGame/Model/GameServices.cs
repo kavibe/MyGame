@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using static System.Net.Mime.MediaTypeNames;
+using Microsoft.Xna.Framework.Media;
 
 namespace MyGame.Model
 {
@@ -16,6 +17,13 @@ namespace MyGame.Model
         private int _screenWidth = 1920;
         private int _screenHeight = 1080;
         private bool _isPaused  = false;
+        private static Song _music;
+
+        public static Song Music
+        {
+            get => _music;
+            set => _music = value;
+        }
 
         public bool IsPaused
         {

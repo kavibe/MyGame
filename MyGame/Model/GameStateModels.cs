@@ -5,18 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 
 namespace MyGame.Model
 {
     public class MenuModel
     {
         private static Texture2D _background;
+        
 
         public static Texture2D Background
         {
             get => _background;
             set => _background = value;
         }
+
+       
     }
 
     public class PauseModel

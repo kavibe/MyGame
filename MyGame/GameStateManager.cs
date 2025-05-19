@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 using MyGame.Controller;
 using MyGame.Model;
 using MyGame.View;
@@ -23,6 +24,8 @@ namespace MyGame
 
         private GameStateManager() { }
 
+        
+
         public void ChangeState(GameState newState)
         {
             CurrentState = newState;
@@ -30,16 +33,20 @@ namespace MyGame
         }
 
         public static void UpdateController(MenuController _menuController, GameController _controller, BackgroundTrafficController _backgroundController, 
-            GameTime gameTime, GameServices _model, LossController _lossController)
+            GameTime gameTime, GameServices _model, LossController _lossController, Song _music)
         {
             switch (Instance.CurrentState)
             {
                 case GameState.Menu:
+                    
                     _menuController.Update(gameTime);
                     _controller.Update(gameTime);
+                    MediaPlayer.Play(_music);
+                    MediaPlayer.IsRepeating = true;
                     break;
 
                 case GameState.Playing:
+    
                     _controller.Update(gameTime);
                     _backgroundController.Update(gameTime);
                     break;
@@ -66,10 +73,13 @@ namespace MyGame
             {
                 case GameState.Menu:
                     _menuView.Draw();
+                    
                     break;
 
                 case GameState.Playing:
+                 
                     _view.Draw();
+
                     break;
 
                 case GameState.Paused:
@@ -90,7 +100,6 @@ namespace MyGame
             switch (newState)
             {
                 case GameState.Playing:
-                    // Инициализация новой игры
                     break;
             }
         }

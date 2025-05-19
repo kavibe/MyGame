@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using MyGame.Model;
+using Microsoft.Xna.Framework.Media;
 
 namespace MyGame.Controller
 {
@@ -23,6 +24,8 @@ namespace MyGame.Controller
 
             if (Keyboard.GetState().IsKeyDown(Keys.F4) && (GameStateManager.Instance.CurrentState == GameState.Menu))
                 ExitGame?.Invoke();
+
+            
         }
 
         public event Action ExitGame;

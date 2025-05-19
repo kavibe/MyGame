@@ -3,60 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\pauseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\pauseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\lossview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\lossview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\gameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\gameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamestatemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamestatemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gameservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gameservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamestatemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamestatemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\controller\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\controller\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\controller\\losscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\controller\\losscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\controller\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\gameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\gameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\model\\gamemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\controller\\backgroundtrafficcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\controller\\backgroundtrafficcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\pauseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\pauseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\view\\lossview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\view\\lossview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|c:\\users\\\u0431\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\desktop\\c# projects\\mygame\\mygame\\controller\\losscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664F36C8-5C1F-478E-8C38-CB6CD1AB2025}|MyGame\\MyGame.csproj|solutionrelative:mygame\\controller\\losscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,28 +74,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "GameView.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\GameView.cs",
+              "RelativeDocumentMoniker": "MyGame\\View\\GameView.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\GameView.cs",
+              "RelativeToolTip": "MyGame\\View\\GameView.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T08:06:10.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameLogic.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameLogic.cs",
+              "RelativeDocumentMoniker": "MyGame\\Model\\GameLogic.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameLogic.cs",
+              "RelativeToolTip": "MyGame\\Model\\GameLogic.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAlwGgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:00:29.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Game1.cs",
               "RelativeDocumentMoniker": "MyGame\\Game1.cs",
               "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Game1.cs",
               "RelativeToolTip": "MyGame\\Game1.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFcAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAApwFIAAACSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T08:40:41.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GameLogic.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameLogic.cs",
-              "RelativeDocumentMoniker": "MyGame\\Model\\GameLogic.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameLogic.cs",
-              "RelativeToolTip": "MyGame\\Model\\GameLogic.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAA5wDgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "GameStateModels.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameStateModels.cs",
+              "RelativeDocumentMoniker": "MyGame\\Model\\GameStateModels.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameStateModels.cs",
+              "RelativeToolTip": "MyGame\\Model\\GameStateModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwBYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T10:00:29.072Z",
+              "WhenOpened": "2025-05-04T11:28:07.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\MenuController.cs",
+              "RelativeDocumentMoniker": "MyGame\\Controller\\MenuController.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\MenuController.cs",
+              "RelativeToolTip": "MyGame\\Controller\\MenuController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T08:40:46.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameStateManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\GameStateManager.cs",
+              "RelativeDocumentMoniker": "MyGame\\GameStateManager.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\GameStateManager.cs",
+              "RelativeToolTip": "MyGame\\GameStateManager.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAWwCwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T08:34:00.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameServices.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameServices.cs",
+              "RelativeDocumentMoniker": "MyGame\\Model\\GameServices.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameServices.cs",
+              "RelativeToolTip": "MyGame\\Model\\GameServices.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T16:54:38.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\GameController.cs",
+              "RelativeDocumentMoniker": "MyGame\\Controller\\GameController.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\GameController.cs",
+              "RelativeToolTip": "MyGame\\Controller\\GameController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T09:27:12.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuView.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\MenuView.cs",
+              "RelativeDocumentMoniker": "MyGame\\View\\MenuView.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\MenuView.cs",
+              "RelativeToolTip": "MyGame\\View\\MenuView.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T08:38:00.028Z",
               "EditorCaption": ""
             },
             {
@@ -106,40 +197,14 @@
               "RelativeDocumentMoniker": "MyGame\\Model\\GameModels.cs",
               "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameModels.cs",
               "RelativeToolTip": "MyGame\\Model\\GameModels.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAQwAcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T09:44:01.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameView.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\GameView.cs",
-              "RelativeDocumentMoniker": "MyGame\\View\\GameView.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\GameView.cs",
-              "RelativeToolTip": "MyGame\\View\\GameView.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T08:06:10.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuView.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\MenuView.cs",
-              "RelativeDocumentMoniker": "MyGame\\View\\MenuView.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\MenuView.cs",
-              "RelativeToolTip": "MyGame\\View\\MenuView.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T08:38:00.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "PauseView.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\PauseView.cs",
               "RelativeDocumentMoniker": "MyGame\\View\\PauseView.cs",
@@ -147,64 +212,23 @@
               "RelativeToolTip": "MyGame\\View\\PauseView.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwBMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:17:32.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-04T12:17:32.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameStateManager.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\GameStateManager.cs",
-              "RelativeDocumentMoniker": "MyGame\\GameStateManager.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\GameStateManager.cs",
-              "RelativeToolTip": "MyGame\\GameStateManager.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswCkAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "BackgroundTrafficController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\BackgroundTrafficController.cs",
+              "RelativeDocumentMoniker": "MyGame\\Controller\\BackgroundTrafficController.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\BackgroundTrafficController.cs",
+              "RelativeToolTip": "MyGame\\Controller\\BackgroundTrafficController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T08:34:00.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T17:00:51.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\GameController.cs",
-              "RelativeDocumentMoniker": "MyGame\\Controller\\GameController.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\GameController.cs",
-              "RelativeToolTip": "MyGame\\Controller\\GameController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T09:27:12.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameStateModels.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameStateModels.cs",
-              "RelativeDocumentMoniker": "MyGame\\Model\\GameStateModels.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameStateModels.cs",
-              "RelativeToolTip": "MyGame\\Model\\GameStateModels.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T11:28:07.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GameServices.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameServices.cs",
-              "RelativeDocumentMoniker": "MyGame\\Model\\GameServices.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Model\\GameServices.cs",
-              "RelativeToolTip": "MyGame\\Model\\GameServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:54:38.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "LossView.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\View\\LossView.cs",
               "RelativeDocumentMoniker": "MyGame\\View\\LossView.cs",
@@ -212,25 +236,11 @@
               "RelativeToolTip": "MyGame\\View\\LossView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T09:00:37.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T09:00:37.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\MenuController.cs",
-              "RelativeDocumentMoniker": "MyGame\\Controller\\MenuController.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\MenuController.cs",
-              "RelativeToolTip": "MyGame\\Controller\\MenuController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T08:40:46.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "LossController.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\LossController.cs",
               "RelativeDocumentMoniker": "MyGame\\Controller\\LossController.cs",
@@ -238,21 +248,7 @@
               "RelativeToolTip": "MyGame\\Controller\\LossController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:58:29.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BackgroundTrafficController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\BackgroundTrafficController.cs",
-              "RelativeDocumentMoniker": "MyGame\\Controller\\BackgroundTrafficController.cs",
-              "ToolTip": "C:\\Users\\\u0411\u0435\u043A\u0441\u0443\u043B\u0442\u0430\u043D\\Desktop\\C# projects\\MyGame\\MyGame\\Controller\\BackgroundTrafficController.cs",
-              "RelativeToolTip": "MyGame\\Controller\\BackgroundTrafficController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA8wBUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T17:00:51.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T08:58:29.943Z"
             }
           ]
         }

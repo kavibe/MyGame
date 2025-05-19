@@ -8,7 +8,9 @@
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/car.png</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/File.xml</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/font.spritefont</File>
+    <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/gameMusic.mp3</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/loss.png</File>
+    <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/mainMenuMusic.mp3</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/menu1.png</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/menu2.png</File>
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/pause.png</File>
@@ -16,6 +18,8 @@
     <File>C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/road2.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

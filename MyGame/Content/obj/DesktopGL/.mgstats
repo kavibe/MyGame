@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/loss.png","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/loss.xnb","TextureProcessor","Texture2DContent",12414,10058605,0,48583
+"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/gameMusic.mp3","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/gameMusic.xnb","SongProcessor","SongContent",161016,127,0,9704473
+"C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/mainMenuMusic.mp3","C:/Users/Бексултан/Desktop/C# projects/MyGame/MyGame/Content/bin/DesktopGL/mainMenuMusic.xnb","SongProcessor","SongContent",1923072,131,3,45971

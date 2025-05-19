@@ -34,3 +34,7 @@ C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\C
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\menu2.xnb
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\pause.xnb
 C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\loss.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\gameMusic.ogg
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\gameMusic.xnb
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\mainMenuMusic.ogg
+C:\Users\Бексултан\Desktop\C# projects\MyGame\MyGame\bin\Debug\net8.0\Content\mainMenuMusic.xnb

@@ -80,7 +80,7 @@ namespace MyGame
 
         protected override void Update(GameTime gameTime)
         {
-            GameStateManager.UpdateController(_menuController, _controller, _backgroundController, gameTime, _model, _lossController);
+            GameStateManager.UpdateController(_menuController, _controller, _backgroundController, gameTime, _model, _lossController, GameServices.Music);
 
             base.Update(gameTime);
         }
